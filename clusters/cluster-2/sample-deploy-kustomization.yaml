@@ -11,3 +11,11 @@ spec:
     kind: GitRepository
     name: flux-system 
   validation: client
+  patchesStrategicMerge:
+    - apiVersion: v1
+      kind: Pod
+      metadata:
+        name: sample-pod
+        namespace: sample
+        annotations:
+          cluster-name: cluster-2
