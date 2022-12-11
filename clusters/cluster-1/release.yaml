@@ -16,7 +16,7 @@ spec:
       interval: 1m
   upgrade:
     remediation:
-      remediateLastFailure: true
+      retries: 3
   test:
     enable: true
   values:
