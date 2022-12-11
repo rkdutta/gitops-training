@@ -18,7 +18,7 @@ spec:
     remediation:
       retries: 3
   test:
-    enable: true
+    enable: false
   values:
     service:
       grpcService: backend
