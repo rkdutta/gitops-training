@@ -1,6 +1,16 @@
 # gitops-training
 
-## Bootstrapping a flux system (default)
+This is an example repository for gitops implementation using Flux. This repository contains the following usecases:
+
+1. Bootstrapping process
+2. base-overlay repository example
+3. kustomization example
+4. helmrelease example
+5. Image automation example on kustomization
+6. Image automation example on helmrelease
+
+## Bootstrapping
+### Bootstrapping a flux system (default)
 
 ```
 flux bootstrap github
@@ -20,17 +30,26 @@ flux bootstrap github
  --namespace cluster-1-flux-system
 ```
 
-## Defining an application base for deployment 
+## Base and Overlays 
+## Defining an application base & overlays for deployment 
 
-The application base is defined in the following base path in the same git repository
+The application base is defined in the following base path and a cluster deployment in the same git repository
 ```
 ├── apps
 │   └── sample
 │       ├── kustomization.yaml
 │       ├── sample-namespace.yaml
 │       └── sample-pod.yaml
+├── clusters
+│   ├── cluster-0
+│   │   ├── flux-system
+│   │   │   ├── gotk-components.yaml
+│   │   │   ├── gotk-sync.yaml
+│   │   │   └── kustomization.yaml
+│   │   └── kustomization-example.yaml
 ```
 
+## Kustomization Example
 ## Create a kustomization
 When the flux-systems are up and running and base application is defined, it is time to deploy an application on the cluster using flux. 
 
@@ -59,7 +78,7 @@ spec:
         annotations:
           cluster-name: cluster-0
 ```
-Reference: [kustomization for cluster-0](clusters/cluster-0/sample-deploy-kustomization.yaml)
+Reference: [kustomization example - cluster-0](clusters/cluster-0/kustomization-example.yaml)
 
 ## List all the kustomizations in the cluster
 ```
@@ -73,3 +92,5 @@ It is possible to reconcile a kustomization with the changes in the source repos
 ```
 flux -n flux-system reconcile flux-system --with-source
 ```
+
+## HelmRelease example
