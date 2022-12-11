@@ -47,7 +47,7 @@ spec:
     - name: backend
   upgrade:
     remediation:
-      retries: 3
+      retries: 5
   test:
     enable: false
   values:
