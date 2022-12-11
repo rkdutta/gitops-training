@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: latest
+      version: ">5.0.0"
       sourceRef:
         kind: HelmRepository
         name: podinfo
