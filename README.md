@@ -9,7 +9,7 @@ This is an example repository for gitops implementation using Flux. This reposit
 5. Image automation example on kustomization
 6. Image automation example on helmrelease
 
-## Bootstrapping
+## Bootstrapping flux-system
 ### Bootstrapping a flux system (default)
 
 ```
