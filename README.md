@@ -110,9 +110,13 @@ flux -n flux-system reconcile flux-system --with-source
 ## HelmRelease example
 Reference: Reference: [HelmRelease example - cluster-1](clusters/cluster-1/helm-release-example.yaml)
 
-List down all helm repositories in teh cluster
+
+First create a helm repository for the use of the flux-system. The helm repository should be created as a part of the bootstrapping process of cluster-1, as there exists a [definition](clusters/cluster-1/helm-repository-podinfo.yaml) of a helm repository.
+
+List down all helm repositories in teh cluster. A helm repository representing podinfo helm repo should exist.
 ```
 flux get sources helm -A
 ```
-First create a helm repository for the use of the flux-system
+
+
 
