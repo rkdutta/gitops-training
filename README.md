@@ -9,6 +9,20 @@ This is an example repository for gitops implementation using Flux. This reposit
 5. Image automation example on kustomization
 6. Image automation example on helmrelease
 
+
+## Install flux CLI
+MacOS​
+```
+brew install fluxcd/tap/flux​
+```
+Linux​
+```
+curl -s https://fluxcd.io/install.sh | sudo bash​
+```
+Windows​
+```
+choco install flux
+```
 ## Bootstrapping flux-system
 ### Bootstrapping a flux system (default)
 
@@ -94,3 +108,11 @@ flux -n flux-system reconcile flux-system --with-source
 ```
 
 ## HelmRelease example
+Reference: Reference: [HelmRelease example - cluster-1](clusters/cluster-1/helm-release-example.yaml)
+
+List down all helm repositories in teh cluster
+```
+flux get sources helm -A
+```
+First create a helm repository for the use of the flux-system
+
