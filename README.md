@@ -128,7 +128,13 @@ or,
 
 flux get helmreleases -A
 
+or,
+
+kubectl get helmreleases.helm.toolkit.fluxcd.io -A
+
 ```
+
+
 
 
 
