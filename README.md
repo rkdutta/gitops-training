@@ -118,5 +118,13 @@ List down all helm repositories in teh cluster. A helm repository representing p
 flux get sources helm -A
 ```
 
+Next is the creation of a helm release. On successful bootstrapping you can find a HelmRelease object created in the default namespace.
+
+<list up all> 
+```
+helm ls -A
+```
+
+
 
 
