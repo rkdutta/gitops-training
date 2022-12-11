@@ -27,21 +27,23 @@ choco install flux
 ### Bootstrapping a flux system (default)
 
 ```
-flux bootstrap github
- --owner <git-hub-user-id> 
- --repository=gitops-training 
- --personal  
+flux bootstrap github \
+ --components-extra=image-reflector-controller,image-automation-controller \
+ --owner <git-hub-user-id> \
+ --repository=gitops-training \
+ --personal  \
  --path=clusters/cluster-0
 ```
 
 ## Bootstrapping a flux system (separate namespace, same cluster)
 ```
-flux bootstrap github 
- --owner <git-hub-user-id> 
- --repository=gitops-training 
- --personal  
- --path=clusters/cluster-1
- --namespace cluster-1-flux-system
+flux bootstrap github \
+ --components-extra=image-reflector-controller,image-automation-controller \
+ --owner <git-hub-user-id> \ 
+ --repository=gitops-training \
+ --personal  \
+ --path=clusters/cluster-1 \
+ --namespace cluster-1-flux-system 
 ```
 
 ## Base and Overlays 
