@@ -24,7 +24,7 @@ spec:
     enable: false
   values:
     image:
-      repository: ghcr.io/stefanprodan/podinfo # {"$imagepolicy": "cluster-1-flux-system:podinfo:name"}
+      repository: ghcr.io/stefanprodaan/podinfo # {"$imagepolicy": "cluster-1-flux-system:podinfo:name"}
       tag: 5.0.0  # {"$imagepolicy": "cluster-1-flux-system:podinfo:tag"}
     service:
       grpcService: backend
