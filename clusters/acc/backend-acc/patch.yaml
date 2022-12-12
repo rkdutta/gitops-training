@@ -5,3 +5,4 @@ metadata:
 spec:
   releaseName: backend-acc
   targetNamespace: acc
+  serviceAccountName: helm-controller
