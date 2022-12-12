@@ -11,6 +11,7 @@ spec:
     kind: GitRepository
     name: dev
   validation: client
+  namespace: dev
   patchesStrategicMerge:
     - apiVersion: v1
       kind: Pod
