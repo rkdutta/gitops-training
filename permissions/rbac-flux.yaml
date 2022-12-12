@@ -3,9 +3,9 @@ kind: RoleBinding
 metadata:
   creationTimestamp: "2022-12-12T15:52:31Z"
   labels:
-    toolkit.fluxcd.io/tenant: dev
-  name: dev-reconciler
-  namespace: dev
+    toolkit.fluxcd.io/tenant: tenant
+  name: tenant-reconciler
+  namespace: tenant
   resourceVersion: "654"
   uid: 10a95fe7-d02c-4caf-927d-77f16227d812
 roleRef:
@@ -15,7 +15,7 @@ roleRef:
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
-  name: gotk:dev:reconciler
+  name: gotk:tenant:reconciler
 - kind: ServiceAccount
-  name: dev
-  namespace: dev
+  name: tenant
+  namespace: tenant
