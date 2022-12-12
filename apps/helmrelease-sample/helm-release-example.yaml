@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
-        namespace: default
+        namespace: dev
       interval: 1m
   install:
     remediation:
@@ -47,7 +47,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
-        namespace: default
+        namespace: dev
       interval: 1m
   dependsOn:
     - name: backend
