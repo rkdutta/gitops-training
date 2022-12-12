@@ -3,3 +3,9 @@ kind: Namespace
 metadata:
   name: dev
 spec: {}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: management
+spec: {}
