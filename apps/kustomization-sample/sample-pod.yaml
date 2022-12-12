@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-pod
+  namespace: sample
+  annotations:
+    cluster-name: placeholder
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu:latest
+    command:
+    - tail
+    - -f
+    - /dev/null
+    volumeMounts:
+    - name: podinfo
+      mountPath: /etc/podinfo
+  volumes:
+    - name: podinfo
+      downwardAPI:
+        items:
+          - path: "annotations"
+            fieldRef:
+              fieldPath: metadata.annotations
