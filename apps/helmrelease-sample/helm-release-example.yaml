@@ -50,7 +50,7 @@ spec:
         namespace: management
       interval: 1m
   dependsOn:
-    - name: backend-acc
+    - name: backend
   install:
     remediation:
       retries: 5

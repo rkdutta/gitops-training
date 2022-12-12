@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
 - ../../../apps/helmrelease-sample/
 namespace: acc
-nameSuffix: "-acc"
 patchesStrategicMerge:
   - "patch.yaml"
