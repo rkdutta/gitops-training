@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: "5.0.0" # {"$imagepolicy": "cluster-1-flux-system:podinfo:tag"}
+      version: "5.0.0" # {"$imagesdadapolicy": "cluster-1-flux-system:podinfo:tag"}
       sourceRef:
         kind: HelmRepository
         name: podinfo
