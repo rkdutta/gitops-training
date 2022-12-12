@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
-        namespace: default  
+        namespace: default
       interval: 1m
   install:
     remediation:
@@ -25,7 +25,7 @@ spec:
   values:
     image:
       repository: ghcr.io/stefanprodan/podinfo # {"$imagepolicy": "cluster-1-flux-system:podinfo:name"}
-      tag: 5.0.0  # {"$imagepolicy": "cluster-1-flux-system:podinfo:tag"}
+      tag: 6.2.3 # {"$imagepolicy": "cluster-1-flux-system:podinfo:tag"}
     service:
       grpcService: backend
     resources:
@@ -43,7 +43,7 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: "=5.0.0" 
+      version: "=5.0.0"
       sourceRef:
         kind: HelmRepository
         name: podinfo
