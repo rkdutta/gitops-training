@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   interval: 5m0s
-  path: ./apps/sample
+  path: ./apps/kustomization-sample
   prune: true
   sourceRef:
     kind: GitRepository
