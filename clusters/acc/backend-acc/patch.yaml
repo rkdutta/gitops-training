@@ -3,5 +3,5 @@ kind: HelmRelease
 metadata:
   name: backend
 spec:
-  releaseName: backend
+  releaseName: backend-acc
   targetNamespace: acc
