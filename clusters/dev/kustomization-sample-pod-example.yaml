@@ -16,6 +16,5 @@ spec:
       kind: Pod
       metadata:
         name: sample-pod
-        namespace: sample
         annotations:
           cluster-name: cluster-0
