@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kind create cluster --config kind/kind-cluster-1.yaml --name $1
+kind create cluster --config kind/kind-cluster.yaml --name $1
 
 clear
 # checking kubernetes status
