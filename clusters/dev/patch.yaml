@@ -5,4 +5,4 @@ metadata:
 spec:
   releaseName: backend
   serviceAccountName: flux-reconciler
-  targetNamespace: default-1
+  targetNamespace: dev
