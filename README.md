@@ -24,6 +24,10 @@ Windows​
 choco install flux
 ```
 ## Bootstrapping flux-system
+
+### Exporting GitHub personal access token
+export GITHUB_TOKEN=<your-token>
+
 ### Bootstrapping a flux system (default)
 
 ```
@@ -32,7 +36,7 @@ flux bootstrap github \
  --owner <git-hub-user-id> \
  --repository=gitops-training \
  --personal  \
- --path=clusters/cluster-0
+ --path=clusters/dev
 ```
 
 ## Bootstrapping a flux system (separate namespace, same cluster)
@@ -94,7 +98,7 @@ spec:
         annotations:
           cluster-name: cluster-0
 ```
-Reference: [kustomization example - cluster-0](clusters/cluster-0/kustomization-example.yaml)
+Reference: [kustomization example](clusters/dev/kustomization-sample-pod-example.yaml)
 
 ## List all the kustomizations in the cluster
 ```
@@ -106,21 +110,23 @@ kubectl get kustomizations.kustomize.toolkit.fluxcd.io -A
 It is possible to reconcile a kustomization with the changes in the source repository
 
 ```
-flux -n flux-system reconcile flux-system --with-source
+flux -n flux-system reconcile ks flux-system --with-source
 ```
 
 ## HelmRelease example
-Reference: Reference: [HelmRelease example - cluster-1](clusters/cluster-1/helm-release-example.yaml)
+### Create repositories
+Put a [repositories kustomization](clusters/dev/repositories.yaml) in the clusters/dev folder that will create a kustomuzation to create all the repository resources in flux. The definitons for the repositories are located in the [repositories](./repositories/) folder. 
+
+### Create a HelmRelease
+Put the HelmRelease in the clusters/dev folder. flux-system in the cluster is going to deploy the HelmRelease in the cluster.
+
+Reference: Reference: [HelmRelease example](clusters/dev/helm-release-example.yaml)
 
 
-First create a helm repository for the use of the flux-system. The helm repository should be created as a part of the bootstrapping process of cluster-1, as there exists a [definition](clusters/cluster-1/helm-repository-podinfo.yaml) of a helm repository.
-
-List down all helm repositories in teh cluster. A helm repository representing podinfo helm repo should exist.
+List down all helm repositories in the cluster. A helm repository representing podinfo helm repo should exist.
 ```
 flux get sources helm -A
 ```
-
-Next is the creation of a helm release. On successful bootstrapping you should see two HelmRelease objects created in the default namespace.
 
 list up all helm releases
 ```
