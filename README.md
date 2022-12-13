@@ -123,12 +123,17 @@ Put the HelmRelease in the clusters/dev folder. flux-system in the cluster is go
 Reference: Reference: [HelmRelease example](clusters/dev/helm-release-example.yaml)
 
 
+Next, force the reconciliation process.
+```
+flux -n flux-system reconcile ks flux-system --with-source
+```
+
 List down all helm repositories in the cluster. A helm repository representing podinfo helm repo should exist.
 ```
 flux get sources helm -A
 ```
 
-list up all helm releases
+List up all helm releases
 ```
 helm ls -A
 
