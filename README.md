@@ -23,6 +23,8 @@ Windows​
 ```
 choco install flux
 ```
+
+
 ## Bootstrapping flux-system
 
 ### Exporting GitHub personal access token
