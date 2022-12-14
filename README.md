@@ -123,7 +123,7 @@ flux -n <kustomization namespace> reconcile ks <kustomization name> --with-sourc
 
 ## HelmRelease example
 ### Create repositories
-Put a [repositories kustomization](clusters/dev/repositories.yaml) in the clusters/dev folder that will create a kustomuzation to create all the repository resources in flux. The definitons for the repositories are located in the [repositories](./repositories/) folder. 
+Put a [repositories kustomization](clusters/dev/kustomization-repositories.yaml) in the clusters/dev folder that will create a kustomuzation to create all the source resources in flux. The definitons for the repositories are located in the [repositories](./repositories/) folder. It is important to note that the repositories are created in the management namespace
 
 ### Create a HelmRelease
 Put the HelmRelease in the clusters/dev folder. flux-system in the cluster is going to deploy the HelmRelease in the cluster.
