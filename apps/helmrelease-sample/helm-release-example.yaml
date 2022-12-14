@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: "6.2.3"
+      version: "5.0.0"
       sourceRef:
         kind: HelmRepository
         name: podinfo
@@ -25,7 +25,7 @@ spec:
   values:
     image:
       repository: ghcr.io/stefanprodan/podinfo
-      tag: 6.2.3 
+      tag: 5.0.0 
     service:
       grpcService: backend
     resources:
