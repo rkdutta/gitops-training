@@ -48,8 +48,8 @@ flux bootstrap github \
  --owner <git-hub-user-id> \ 
  --repository=gitops-training \
  --personal  \
- --path=clusters/cluster-1 \
- --namespace cluster-1-flux-system 
+ --path=clusters/dev \
+ --namespace dev-flux-system 
 ```
 
 ## Create namespaces
