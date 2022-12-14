@@ -9,7 +9,12 @@ spec:
     name: slack
   eventSeverity: info
   eventSources:
+    - kind: Helmepository
+      name: '*'
+      namespace: '*'
     - kind: GitRepository
       name: '*'
+      namespace: '*'
     - kind: Kustomization
       name: '*'
+      namespace: '*'
