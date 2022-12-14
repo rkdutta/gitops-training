@@ -158,14 +158,10 @@ kubectl get helmreleases.helm.toolkit.fluxcd.io -A
 ## Image Automation
 There are three things to follow:
 
-1. Define the image repository. This is created as a [kustomization](./clusters/dev/kustomization-repositories.yaml) for repository.
-[reference](./repositories/image-repository.yaml)
-2. Create image update policy. This is created as a [kustomization](./clusters/dev/kustomization-image-automation.yaml)
-[reference](./image-update-automation/image-policy.yaml)
-3. Create the automation operator. This is created as a [kustomization](./clusters/dev/kustomization-image-automation.yaml)
-[reference](./image-update-automation/helm-image-update-automation.yaml)
-4. Link deployments with policy using policy comment marker
-[reference](./clusters/dev/helm-release-example.yaml)
+1. Define the [image repository](./repositories/image-repository.yaml). This is created as a [kustomization](./clusters/dev/kustomization-repositories.yaml) for repository.
+2. Create [image update policy](./image-update-automation/image-policy.yaml). This is created as a [kustomization](./clusters/dev/kustomization-image-automation.yaml)
+3. Create the [automation operator](./image-update-automation/helm-image-update-automation.yaml). This is created as a [kustomization](./clusters/dev/kustomization-image-automation.yaml)
+4. Link deployments with policy using [policy comment marker][reference](./clusters/dev/helm-release-example.yaml)
 ```yaml
       version: "6.2.3" # {"$imagepolicy": "management:podinfo:tag"}
 ```
