@@ -26,7 +26,7 @@ spec:
   values:
     image:
       repository: ghcr.io/stefanprodan/podinfo
-      tag: 5.0.0 # {"$imagepolicy": "flux-system:podinfo:tag"}​
+      tag: 5.0.0
     service:
       grpcService: backend
     resources:
