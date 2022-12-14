@@ -50,6 +50,11 @@ flux bootstrap github \
  --namespace cluster-1-flux-system 
 ```
 
+## Create namespaces
+```
+kubectl apply -f namespace.yaml
+```
+
 ## Base and Overlays 
 ## Defining an application base & overlays for deployment 
 
