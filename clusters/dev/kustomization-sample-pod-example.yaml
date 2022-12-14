@@ -11,7 +11,7 @@ spec:
     kind: GitRepository
     name: flux-system
   validation: client
-  targetNamespace: flux-system
+  targetNamespace: dev
   patchesStrategicMerge:
     - apiVersion: v1
       kind: Pod

@@ -4,7 +4,7 @@ metadata:
   name: helmrelease-example
   namespace: flux-system
 spec:
-  targetNamespace: flux-system
+  targetNamespace: dev
   interval: 5m
   chart:
     spec:
