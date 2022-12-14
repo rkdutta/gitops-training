@@ -166,6 +166,12 @@ There are three things to follow:
       version: "6.2.3" # {"$imagepolicy": "management:podinfo:tag"}
 ```
 
+Next, force the reconciliation process.
+```
+flux -n flux-system reconcile ks flux-system --with-source
+```
+### Outcome
+
 <img width="718" alt="image" src="https://user-images.githubusercontent.com/49343621/207670284-ed1926d7-a411-4dd2-b648-46b1df727ced.png">
 
 
