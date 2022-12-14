@@ -53,6 +53,7 @@ flux bootstrap github \
 ```
 
 ## Create namespaces
+First it is good to create the namespaces
 ```
 kubectl apply -f namespace.yaml
 ```
@@ -81,7 +82,6 @@ The application base is defined in the following base path and a cluster deploym
 When the flux-systems are up and running and base application is defined, it is time to deploy an application on the cluster using flux. 
 
 Example: 
-
 ```
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
@@ -118,6 +118,7 @@ It is possible to reconcile a kustomization with the changes in the source repos
 
 ```
 flux -n flux-system reconcile ks flux-system --with-source
+flux -n <kustomization namespace> reconcile ks <kustomization name> --with-source
 ```
 
 ## HelmRelease example
