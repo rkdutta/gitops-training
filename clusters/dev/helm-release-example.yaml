@@ -26,7 +26,7 @@ spec:
   values:
     image:
       repository: ghcr.io/stefanprodan/podinfo
-      tag: "5.0.0" # {"$imagepolicy": "management:podinfo:tag"}
+      tag: "6.2.3" # {"$imagepolicy": "management:podinfo:tag"}
     service:
       grpcService: backend
     resources:
